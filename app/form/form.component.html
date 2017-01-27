@@ -1,0 +1,45 @@
+<h1>Forms</h1>
+
+	name:<input type="text" [(ngModel)]="name" required>
+	<select [(ngModel)]="count">
+		<option>country</option>
+		<option *ngFor="let country of countrylist">{{country}}</option>
+	</select>
+
+	<p>{{name}}</p>
+	<p>{{count}}</p>
+
+<div>
+	<h1>{{title}}</h1>
+  <h2>My favorite hero is: {{myHero.name}}</h2>
+  <p>Heroes:</p>
+  <ul>
+    <li *ngFor="let hero of heroes">
+     {{hero.id}} : {{ hero.name }}
+      </li>
+  </ul>
+  <p *ngIf="heroes.length > 3">There are many heroes!</p>
+</div>
+
+<div>
+	<button (click)="onClickMe()">Click me!</button>
+    {{clickMessage}}
+</div>
+
+<div>
+	 <input (keyup)="onKey($event)">
+     <p>{{values}}</p>
+</div>
+
+
+<div>
+	<input #boxs (keyup)="0">
+    <p>{{boxs.value}}</p>
+</div>
+
+<div>
+	{{names}}<br>
+	{{abcd}}
+</div>
+
+

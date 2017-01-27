@@ -1,0 +1,15 @@
+<h1>{{ritesh}}</h1>
+<h1>{{model.name}}</h1>
+
+<form (ngSubmit)="onSubmit(name,course,college)" [hidden]="submitted" #heroForm="ngForm">
+	<input type="text" name="name" [(ngModel)]="name" #big="ngModel" required>
+	<input type="text" name="course" [(ngModel)]="course" required>
+	<input type="text" name="college" [(ngModel)]="college" required>
+	<button type="submit" [disabled]="!heroForm.form.valid">click</button>
+</form>
+
+<p [hidden]="!submitted">
+	name:{{riteshname | uppercase}} <br>
+	course:{{riteshcourse}} <br>
+	college:{{riteshcollege}}
+</p>
